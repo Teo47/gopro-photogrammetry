@@ -9,7 +9,7 @@ require '../lib/constants'
 
 gpCamera = Camera.new
 
-gpCamera.camera_mode(Mode::MultiShotMode, Mode::SubMode::TimeLapse)
+gpCamera.camera_mode(Mode::MultiShotMode, Mode::SubMode::MultiShot::TimeLapse)
 gpCamera.gpControlCommand(Multishot::TIMELAPSE_INTERVAL, Multishot::TimeLapseInterval::IHalf1)
 gpCamera.shutter(Shutter::ON)
 while gpCamera.status(Status::Status,Status::STATUS::IsBusy) == 1
